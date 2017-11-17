@@ -121,13 +121,12 @@ header button svg .fill {
 }
 
 ul.todo {
-  width: 100%;
+  width: 80%;
   float: left;
-  padding: 10px 10px 10px 10px;
 }
 
 ul.todo li {
-  width: 100%;
+  width: 80%;
   min-height: 50px;
   float: left;
   font-size: 13px;
