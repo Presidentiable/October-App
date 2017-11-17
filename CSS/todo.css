@@ -1,23 +1,14 @@
 @charset "UTF-8";
 
-html, body {
-     font-size: 40px;      
-     margin:0;
-     padding:0; 
-     width:100%; 
-     height:100%;
+html{
+    width:100%;
+    height:100%;
+}
+body{
+    width:100%;
+    height:100%;
 }
 
-.screen {
-  font-size: 0.5em;
-  margin: 0;
-  background-color: red;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-}
 
 .screen .main {
   width: 100%;
