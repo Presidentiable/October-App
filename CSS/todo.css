@@ -115,7 +115,7 @@ header button svg .fill {
 }
 
 .container {
-  width: 100%;
+  width: 80%;
   float: left;
   padding: 50px;
 }
@@ -223,6 +223,11 @@ ul.todo li .buttons button.complete:hover svg .fill {
 }
 
 ul.todo#completed {
+  position: relative;
+  padding: 60px 0 0 0;
+}
+
+ul.todo#todo {
   position: relative;
   padding: 60px 0 0 0;
 }
