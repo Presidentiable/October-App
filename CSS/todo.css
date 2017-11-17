@@ -1,111 +1,147 @@
 @charset "UTF-8";
 
+html, body {
+     font-size: 40px;      
+     margin:0;
+     padding:0; 
+     width:100%; 
+     height:100%;
+}
+
+.screen {
+  font-size: 0.5em;
+  margin: 0;
+  background-color: red;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+.screen .main {
+  width: 100%;
+  height: 100%;
+}
+
 body {
 	background: #898989;
-	padding: 90px 0 0 0;
+	padding: 80px 0 0 0;
 }
 
 body, input, button{
 	font-family: 'Raleway', sans-serif;
 }
 
-header {
-	width:100%;
-	height:170px;
-	position:fixed;
-	padding:15px;
-	top:0;
-	left:0;
-	z-index:5;
-	background:#383838;
-	box-shadow:0px 2px 4px rgba(44,62,80,0.15);
-	border-bottom-right-radius:10px;
-	border-bottom-left-radius:10px;
+.noFill {
+  fill: none;
+}
 
+header {
+  width: 100%;
+  height: 120px;
+
+  position: fixed;
+  padding: 15px;
+  top: 0;
+  left: 0;
+  z-index: 5;
+
+  background: #686868;
+  box-shadow: 0px 2px 4px rgba(44, 62, 80, 0.15);
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 
 header input {
-	width: 87%;
-	height: 150px;
-	float: left;
-	color: #fff;
-	font-size: 30px;
-	font-weight: 50;
-	text-indent: 18px;
-	background: rgba(255,255,255,0.2);
-	margin-top: 10px;
-	border-top-left-radius:5px;
-	border-bottom-left-radius:25px;
-	border-top-right-radius:5px;
-	border-bottom-right-radius:5px;
-	border:0px;
-	box-shadow:none;
-	outline:none;
+  width: 100%;
+  height: 80px;
+  float: left;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 400;
+  text-indent: 18px;
+  padding: 0 60px 0 0;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 5px 25px 25px 5px;
+  border: 0px;
+  box-shadow: none;
+  outline: none;
 
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
 
 header input::-webkit-input-placeholder {
-	color: rgba(255,255,255,0.75);
+  color: rgba(255, 255, 255, 0.75);
 }
 
 header input:-moz-input-placeholder {
-	color: rgba(255,255,255,0.75);
+  color: rgba(255, 255, 255, 0.75);
 }
 
 header input::-moz-input-placeholder {
-	color: rgba(255,255,255,0.75);
+  color: rgba(255, 255, 255, 0.75);
 }
 
 header input:-ms-input-placeholder {
-	color: rgba(255,255,255,0.75);
+  color: rgba(255, 255, 255, 0.75);
 }
 
 header button {
-	width: 90px;
-	height: 150px;
-	position: absolute;
-	margin-top: 10px;
-	right: 40px;
-	z-index:2;
-	border-radius: 25px;
-	background: #cecece;
-	border:0px;
-	border-top-left-radius:5px;
-	border-bottom-left-radius:5px;
-	border-top-right-radius:5px;
-	border-bottom-right-radius:25px;
-	box-shadow:none;
-	outline:none;
-	cursor:pointer;
+  width: 80px;
+  height: 80px;
 
+  position:absolute;
+  top:15px;
+  right:15px;
+  z-index:2;
 
+  border-radius: 15px;
+  background: #fff;
+  border: 0px;
+  box-shadow: none;
+  outline: none;
+  cursor: pointer;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
 
-header button svg{
-	position: absolute;
-	top: 50px;
-	right: 15px;
+header button svg {
+  width: 16px;
+  height: 16px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  margin: -8px 0 0 -8px;
+}
+
+header button svg .fill {
+  fill: #686868;
 }
 
 .container {
-	width: 100%;
-	float: left;
-	padding: 20px;
+  width: 100%;
+  float: left;
+  padding: 50px;
 }
 
 ul.todo {
-  width: 80%;
+  width: 100%;
   float: left;
 }
 
 ul.todo li {
   width: 100%;
-  min-height: 70px;
+  min-height: 50px;
   float: left;
-  font-size: 28px;
-  font-weight: 300;
+  font-size: 13px;
+  font-weight: 200;
   color: #444;
-  line-height: 45px;
+  line-height: 25px;
 
   background: #fff;
   border-radius: 6px;
@@ -125,8 +161,8 @@ ul.todo li .buttons {
   height: 50px;
 
   position: absolute;
-  top: 22px;
-  right: 10px;
+  top: 0;
+  right: 0;
 }
 
 ul.todo li .buttons button {
@@ -140,17 +176,19 @@ ul.todo li .buttons button {
   outline: none;
   cursor: pointer;
 
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
 }
 
 ul.todo li .buttons button:last-of-type:before {
   content: '';
-  width: 4px;
-  height: 30px;
+  width: 1px;
+  height: 35px;
   background: #edf0f1;
 
   position: absolute;
   top: 10px;
-  margin-top: 5px;
   left: 0;
 }
 
@@ -194,25 +232,26 @@ ul.todo li .buttons button.complete:hover svg .fill {
 
 ul.todo#completed {
   position: relative;
-  padding: 50px 30px 30px 30px;
+  padding: 60px 0 0 0;
+}
+
+ul.todo#todo:before {
+  content: 'Finished Task';
+  margin: 15px 0 15px 0;
 }
 
 ul.todo#completed:before {
-  content: '';
-  width: 600px;
-  height: 1px;
-  background: #383838;
-  position: absolute;
-  top: 25px;
-  left: 250px;
-
-  margin: 0 0 0 -75px;
+  content: 'Todo';
+  margin: 15px 0 15px 0;
 }
 
-p {
-	font-family: 'Raleway', sans-serif;
-	font-size: 35px;
-	font-weight: 200;
+ul.todo#todo:before,
+ul.todo#completed:before {
+  width: 100%;
+  display: block;
+  text-align: center;
+  font-size: 25px;
+  color: #aaa;
 }
 
 
